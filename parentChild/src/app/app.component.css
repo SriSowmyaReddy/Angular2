@@ -1,0 +1,13 @@
+.parent{
+    width: 900px;
+    height: 600px;
+    background-color: gray;
+}
+ .labels{
+    
+    margin: 50px;
+ }
+  .para{
+     float: left;
+     margin:10px;
+ }

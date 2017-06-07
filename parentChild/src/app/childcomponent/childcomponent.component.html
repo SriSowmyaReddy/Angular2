@@ -1,0 +1,29 @@
+<div class="child"> 
+  <p>
+    childcomponent works!
+  </p>
+  <div class="container-fluid">
+    <label class="labels">Name</label>
+    <label  class="labels">Age</label>
+    <label  class="labels">Email</label>
+  </div>
+
+  <div class="container-fluid">
+      <input class="inp" type="text" [(ngModel)]="child1" #childInput (keyup)="onChange(childInput.value)"> 
+      <input class="inp" type="text" [(ngModel)]="child2" #childInput1 (keyup)="onChange1(childInput1.value)">
+      <input class="inp" type="text" [(ngModel)]="child3" #childInput2 (keyup)="onChange2(childInput2.value)"> 
+  </div>
+  <div>
+  <p class="para">Old name {{parentValue}}</p>
+  <p class="para">Old age {{parentValue1}}</p>
+  <p class="para">Old email {{parentValue2}}</p>
+  <p class="para">New name {{child1}}</p>
+  <p class="para">New name {{child2}}</p>
+  <p class="para">New name {{child3}}</p>
+  </div>
+  <br>
+
+
+
+
+</div>

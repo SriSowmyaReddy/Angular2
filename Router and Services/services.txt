@@ -1,0 +1,34 @@
+import {Injectable} from '@angular/core';
+import {Http} from '@angular/http';
+import 'rxjs/add/operator/map';  // we need to import this now
+
+    @Injectable()
+    export class Myservice {
+
+    constructor(private _http:Http) {}
+
+getJsonResponse(){
+	let jsonUrl = "../../assets/stubs/test.json"; //give the path for the .json file in your local system
+		return this.http.get(jsonUrl)
+			.map((res: Response) ==> res.json
+			}
+			
+			
+			if we are using the observables rather than promisses is better because we can use the subscribe method many number of time unlike
+			in promisses and another reason is that when an other subscribe function is called we can kill the existing subscribe method 
+			using unsubscribe method.
+			
+			create a json file with all the profile details. 
+			create a component with name profile
+			in the application routes create a url 
+			create a service such that when the page is loaded we get the data to be displayed 
+			on the page. (summary of bullet points, main details, projects)... all these things has to be populated in the response
+			
+			
+			we create custom event here and we use event emmiter for firing the event by ourself. so for that we import the event emmiter from the angular core package
+			 we are creating a property childChanged and we are creating a new event emitter and this will pass a string hence we give it as <string>
+			 this is the generic type
+			 
+			 $sign event s the argument that the angular 2 will use to store the data that is entered into the input field in the child component4
+			 
+			  (childChanged)="childValue = $event" (childChanged1)="childValue1 = $event" (childChanged2)="childValue2 = $event"

@@ -1,0 +1,29 @@
+<div class="parent"> 
+  <div class="container-fluid">
+	 <label class="labels">Name</label>
+	 <label  class="labels">Age</label>
+	 <label  class="labels">Email</label>
+  </div>
+
+	<div class="container-fluid">
+    <input class="inp" type="text" [(ngModel)]= "name" #text1 (keyup)="0">
+  	<input class="inp" type="text" [(ngModel)]= "age" #text2 (keyup)="0">
+  	<input class="inp" type="text" [(ngModel)]= "email" #text3 (keyup)="0" >
+  </div>
+
+
+  <div>
+    <p class="para">Old Name {{name}}</p> 
+    <p class="para">Old Age: {{age}}</p>
+    <p class="para">Old Email {{email}}</p>
+  </div>
+  <div>
+    <p class="para">New Name {{childValue}}</p> 
+    <p class="para">New Age: {{childValue1}}</p>
+    <p class="para">New Email {{childValue2}}</p> 
+   
+</div>
+
+<app-childcomponent [parentValue]="text1.value" [parentValue1]="text2.value" [parentValue2]="text3.value" 
+  (childChanged)="childValue = $event" (childChanged1)="childValue1 = $event" (childChanged2)="childValue2 = $event"></app-childcomponent>
+</div>
